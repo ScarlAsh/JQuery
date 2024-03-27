@@ -1,0 +1,155 @@
+div.container{
+    display:flex;
+    align-content: space-between;
+    width: 50%;
+    margin:auto;
+}
+button{
+    color:rgb(13, 88, 88);
+    width: 100px;
+    height: 50px;
+    margin: 30px;
+}
+ul{
+    position: absolute;
+    Left: 645px;
+    top: 90px;
+    list-style-type:none;
+    display: none;
+}
+li{
+    text-align: center;
+    padding-top:5px;
+    margin-bottom:10px;
+    color:rgb(13, 88, 88);
+    width: 98px;
+    height: 20px;
+    border: 1px solid rgb(13, 88, 88);
+    background-color: rgba(194, 17, 70, 0.128);
+}
+
+form{
+    margin:auto;
+    width: 50%;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    background-color: rgb(30, 61, 61);
+    border-radius: 10px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+.form-group{
+    margin:10px;
+}
+
+.snowman{
+    display:none;
+    margin:auto;
+    width: 50%;
+    height: 400px;
+    background-color: rgb(228, 242, 242);
+    border-radius: 10px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+.snowman span{
+    margin: auto;
+    padding:20px;
+    text-align: center;
+}
+label#send{
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    background-color: blanchedalmond;
+}
+#edit{
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    background-color: blanchedalmond;
+}
+div.data{
+        margin:auto;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        display: none;
+        flex-direction: column;
+        background-color: rgb(201, 215, 215);
+        border-radius: 10px;
+        -webkit-border-radius:;
+        -moz-border-radius:;
+        -ms-border-radius:;
+        -o-border-radius:;
+}
+
+#img{
+    position: absolute;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    top: 40%;
+}
+.img-container{
+    display:none;
+    margin-left:500px;
+    margin-top:50px;
+    height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.showform{
+    display:flex;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <button id="about">About</button>
+        <button id="gallery">Gallery</button>
+        <button id="services">Services</button>
+        <button id="complain">Complain</button>
+    </div>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+
+
+
+    <form action="" class="showform">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name"/>
+        </div>
+        <div class="form-group"> 
+        <label for="email">Email</label>
+        <input type="text" name="email"/>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" name="phone"/>
+        </div>
+        <div class="form-group">
+            <label for="complain">Complain</label>
+            <br>
+        <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <label id="send">Send</label>
+        </div>
+    </form>
+
+
+
+
+    <div class="snowman">
+        <span>Story about snow man</span>
+    </div>
+
+
+    <div class="data">
+        <span> </span> <br>
+        <span> </span> <br>
+        <span> </span> <br>
+        <span> </span> <br>
+        <label id="edit">Edit</label>
+    </div>
+
+
+    <div class="img-container">
+        <div id="img">
+            <img id="prev" src="./jQuery/left.png" alt="" width="25px" height="25px">
+            <img id="next" src="./jQuery/right.png" alt="" width="25px" height="25px">
+        </div>
+        <img id="bigimg" src="./jQuery/5.jpg" alt="" width="250" height="250">
+    </div>
+
+
+
+
+
+
+<script>
+$(document).ready(function()
+{
+$("#services").click(function() {
+    $("ul").slideToggle(400);
+});
+
+
+$("#complain").click(function() {
+    $("form").toggleClass("showform");
+    $('.data').toggleClass("showform");
+});
+
+$("#about").click(function() {
+    $(".snowman").toggleClass("showform");
+});
+
+$("#gallery").click(function() {
+    $(".img-container").toggleClass("showform");
+});
+
+$("#send").click(function() {
+    $('.data').css('display' , 'flex')
+    $("form").toggleClass("showform")
+    var name = $('input[name="name"]').val()
+    var email = $('input[name="email"]').val()
+    var phone = $('input[name="phone"]').val()
+    var complain = $('textarea[name="msg"]').val()
+    $(".data span:eq(0)").text("your name is : " + name)
+    $(".data span:eq(1)").text("your email is : " + email)  
+    $(".data span:eq(2)").text("your phone number is : " + phone)  
+    $(".data span:eq(3)").text("your complain is : " + complain)  
+});
+
+$("#edit").click(function() {
+    $('.data').css('display' , 'none')
+    $("form").toggleClass("showform")
+});
+
+var currentImageIndex = 5; // Assuming the initial image is the last one
+
+$("#prev").click(function() {
+    if (currentImageIndex > 1) {
+        currentImageIndex--;
+        $("#bigimg").fadeOut(500, function() {
+            $(this).attr("src", "./jQuery/" + currentImageIndex + ".jpg").fadeIn(500);
+        });
+    }
+});
+
+$("#next").click(function() {
+    if (currentImageIndex < 8) {
+        currentImageIndex++;
+        $("#bigimg").fadeOut(500, function() {
+            $(this).attr("src", "./jQuery/" + currentImageIndex + ".jpg").fadeIn(500);
+        });
+    }
+});
+
+
+});
+
+</script>
+</body>
+</html>
